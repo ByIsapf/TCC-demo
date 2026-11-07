@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secretaria | Login</title>
+  <link rel="stylesheet" href="../css/secretaria.css">
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+
+<body class="login-page">
+
+  <!-- Fundo da página -->
+  <div class="login-background"></div>
+
+  <!-- Conteúdo principal do login -->
+  <main class="secretary-login">
+
+    <!-- =========================
+         IDENTIDADE DA ESCOLA
+         ========================= -->
+    <section class="login-brand">
+
+      <div class="brand-content">
+
+        <span class="brand-label">G.E.A</span>
+
+        <h1>Gerenciamento de Alunos</h1>
+
+        <p>
+          Sistema de gerenciamento escolar
+          da Escola Pedro Casemiro Leite.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CARTÃO DE LOGIN
+         ========================= -->
+    <section class="login-card">
+
+      <div class="card-head">
+
+        <div class="login-icon">
+          <span></span>
+        </div>
+
+        <div>
+          <p class="card-label">ACESSO ADMINISTRATIVO</p>
+
+          <h2>Área da secretaria</h2>
+
+          <p>
+            Acesso restrito aos responsáveis
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- =========================
+           FORMULÁRIO
+           ========================= -->
+      <form id="secretaryForm">
+
+        <!-- E-mail -->
+        <div class="input-group">
+
+          <label for="email">E-mail</label>
+
+          <input
+            id="email"
+            type="email"
+            placeholder="secretaria@escola.com"
+            required
+          >
+
+        </div>
+
+
+        <!-- Senha -->
+        <div class="input-group">
+
+          <label for="password">Senha</label>
+
+          <input
+            id="password"
+            type="password"
+            placeholder="Digite sua senha"
+            required
+          >
+
+        </div>
+
+
+        <!-- Botão -->
+        <button class="primary-btn" type="submit">
+          Entrar
+          <span>→</span>
+        </button>
+
+
+        <!-- Mensagem do formulário -->
+        <p id="secretaryMessage" class="form-message"></p>
+
+      </form>
+
+
+      <!-- =========================
+           VOLTAR PARA ALUNO
+           ========================= -->
+      <div class="secretary-link">
+
+        <a href="../index.html">
+          ← Voltar para acesso do aluno
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       JAVASCRIPT
+       ========================= -->
+  <script>
+
+    /*
+      Seleciona o formulário da secretaria.
+    */
+    document
+      .getElementById("secretaryForm")
+      .addEventListener("submit", (e) => {
+
+        /*
+          Impede o recarregamento da página.
+        */
+        e.preventDefault();
+
+        /*
+          Atualmente o login é apenas visual.
+          Futuramente será integrado ao backend
+          e ao banco de dados.
+        */
+        window.location.href = "../gestao/dashboard.html";
+
+      });
+
+  </script>
+
+<script src="../js/demo.js"></script>
+</body>
+</html>

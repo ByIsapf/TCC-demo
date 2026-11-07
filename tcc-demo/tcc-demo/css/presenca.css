@@ -1,0 +1,254 @@
+/* =========================
+   RESET
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+   ========================= */
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-image: url("../assets/img/fundo-mobile.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #20384d;
+}
+
+
+/* =========================
+   PÁGINA
+   ========================= */
+
+.presenca-page {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px 20px;
+}
+
+
+/* =========================
+   LOGO G.E.A
+   ========================= */
+
+.gea-logo {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.gea-logo span {
+    font-size: 32px;
+    font-weight: 900;
+
+    letter-spacing: 4px;
+
+    color: #1d374c;
+}
+
+.gea-logo p {
+    margin-top: 5px;
+
+    font-size: 12px;
+
+    color: #55758e;
+}
+
+
+/* =========================
+   CARD DE PRESENÇA
+   ========================= */
+
+.presenca-card {
+    width: 100%;
+    max-width: 320px;
+
+    padding: 28px 24px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 40px rgba(31, 51, 68, 0.16);
+
+    animation: aparecer 0.5s ease;
+}
+
+
+/* =========================
+   ÍCONE DE STATUS
+   ========================= */
+
+.status-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 16px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e8f4ed;
+    color: #34875a;
+
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   TÍTULO
+   ========================= */
+
+.presenca-card h1 {
+    font-size: 21px;
+
+    margin-bottom: 8px;
+
+    color: #20384d;
+}
+
+
+/* =========================
+   MENSAGEM
+   ========================= */
+
+.mensagem {
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    color: #718392;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   DADOS DA PRESENÇA
+   ========================= */
+
+.dados-presenca {
+    border-top: 1px solid #e2e9ef;
+    border-bottom: 1px solid #e2e9ef;
+
+    padding: 5px 0;
+}
+
+.dado {
+    padding: 8px 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.dado span {
+    font-size: 11px;
+
+    color: #8495a3;
+}
+
+.dado strong {
+    font-size: 14px;
+
+    color: #294d68;
+}
+
+
+/* =========================
+   NOME DA ESCOLA
+   ========================= */
+
+.escola {
+    margin-top: 18px;
+
+    font-size: 11px;
+
+    color: #8495a3;
+}
+
+
+/* =========================
+   ANIMAÇÃO
+   ========================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+
+        filter: blur(6px);
+    }
+
+    to {
+        opacity: 1;
+
+        filter: blur(0);
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+
+@media (max-width: 480px) {
+
+    .presenca-page {
+        padding: 20px 15px;
+    }
+
+    .presenca-card {
+        max-width: 300px;
+
+        padding: 25px 20px;
+    }
+
+    .gea-logo {
+        margin-bottom: 15px;
+    }
+
+    .gea-logo span {
+        font-size: 30px;
+    }
+
+    .status-icon {
+        width: 54px;
+        height: 54px;
+
+        font-size: 28px;
+
+        margin-bottom: 14px;
+    }
+
+    .presenca-card h1 {
+        font-size: 20px;
+    }
+
+}

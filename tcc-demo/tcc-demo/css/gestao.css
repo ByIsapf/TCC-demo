@@ -1,0 +1,663 @@
+/* =========================
+   RESET
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+   ========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #20384d;
+}
+
+
+/* =========================
+   DASHBOARD
+   ========================= */
+
+.dashboard {
+    min-height: 100vh;
+    display: flex;
+}
+
+
+/* =========================
+   MENU LATERAL
+   ========================= */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    background: #1d374c;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 35px 20px;
+
+    z-index: 100;
+
+    box-shadow:
+        8px 0 30px rgba(31, 51, 68, 0.08);
+}
+
+
+/* =========================
+   LOGO
+   ========================= */
+
+.logo {
+    padding: 5px 10px 45px;
+}
+
+.gea {
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: #ffffff;
+}
+
+.logo span {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #dce7ef;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   MENU
+   ========================= */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu a {
+    display: block;
+
+    padding: 13px 15px;
+
+    border-radius: 9px;
+
+    color: #dce7ef;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.25s;
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+}
+
+.menu a.active {
+    background: #ffffff;
+
+    color: #1d374c;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================
+   SAIR
+   ========================= */
+
+.button-exit {
+    margin-top: auto;
+}
+
+.exit-menu {
+    display: block;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    color: #dce7ef;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.25s;
+}
+
+.exit-menu:hover {
+    background: #ffffff;
+
+    color: #1d374c;
+}
+
+
+/* =========================
+   CONTEÚDO
+   ========================= */
+
+.content {
+    width: calc(100% - 250px);
+
+    min-height: 100vh;
+
+    margin-left: 250px;
+
+    padding: 45px 55px 60px;
+}
+
+
+/* =========================
+   TOPO
+   ========================= */
+
+.top {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #dce3ea;
+}
+
+.page-title > span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #7c8d9c;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+}
+
+.page-title h1 {
+    font-size: 30px;
+
+    font-weight: 700;
+
+    color: #20384d;
+}
+
+.page-title p {
+    margin-top: 7px;
+
+    color: #7c8d9c;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   USUÁRIO
+   ========================= */
+
+.user-info {
+    text-align: right;
+
+    padding-top: 5px;
+}
+
+.user-info strong {
+    display: block;
+
+    color: #20384d;
+
+    font-size: 14px;
+}
+
+.user-info small {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #8b9aa7;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESUMO
+   ========================= */
+
+.overview {
+    display: grid;
+
+    grid-template-columns: 1.35fr 0.8fr 1fr;
+
+    gap: 18px;
+
+    margin-top: 30px;
+}
+
+
+/* =========================
+   CARD PRINCIPAL
+   ========================= */
+
+.main-stat {
+    min-height: 225px;
+
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e0e6ec;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 25px rgba(31, 51, 68, 0.04);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stat-label {
+    color: #7c8d9c;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 1.2px;
+}
+
+.stat-number {
+    margin-top: 25px;
+
+    color: #20384d;
+
+    font-size: 46px;
+    line-height: 1;
+}
+
+.main-stat p {
+    margin-top: 10px;
+
+    color: #8b9aa7;
+
+    font-size: 13px;
+}
+
+.stat-link {
+    margin-top: auto;
+
+    color: #52728d;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.stat-link:hover {
+    color: #1d374c;
+}
+
+
+/* =========================
+   CARD PEQUENO
+   ========================= */
+
+.small-stat {
+    min-height: 225px;
+
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e0e6ec;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 25px rgba(31, 51, 68, 0.04);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.small-number {
+    margin-top: 25px;
+
+    color: #20384d;
+
+    font-size: 40px;
+}
+
+.small-stat p {
+    margin-top: 7px;
+
+    color: #8b9aa7;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   FREQUÊNCIA
+   ========================= */
+
+.attendance {
+    min-height: 225px;
+
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e0e6ec;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 25px rgba(31, 51, 68, 0.04);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.attendance-number {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+
+    margin-top: 25px;
+}
+
+.attendance-number strong {
+    color: #20384d;
+
+    font-size: 38px;
+}
+
+.attendance-number span {
+    color: #7c8d9c;
+
+    font-size: 13px;
+}
+
+.attendance-details {
+    margin-top: 7px;
+
+    color: #8b9aa7;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   ACESSO RÁPIDO
+   ========================= */
+
+.quick-access {
+    margin-top: 45px;
+}
+
+.section-heading span {
+    color: #7c8d9c;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 1.3px;
+}
+
+.section-heading h2 {
+    margin-top: 6px;
+
+    color: #20384d;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   LINKS RÁPIDOS
+   ========================= */
+
+.quick-links {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 18px;
+}
+
+.quick-link {
+    min-height: 105px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e0e6ec;
+
+    border-radius: 13px;
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: 0.25s;
+}
+
+.quick-link:hover {
+    border-color: #b8c8d5;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 22px rgba(31, 51, 68, 0.06);
+}
+
+.quick-link strong {
+    display: block;
+
+    color: #294d68;
+
+    font-size: 14px;
+}
+
+.quick-link span {
+    display: block;
+
+    max-width: 190px;
+
+    margin-top: 7px;
+
+    color: #8b9aa7;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+.quick-link .arrow {
+    margin-left: 10px;
+
+    color: #52728d;
+
+    font-size: 19px;
+}
+
+
+/* =========================
+   ANIMAÇÃO
+   ========================= */
+
+.top,
+.main-stat,
+.small-stat,
+.attendance,
+.quick-access {
+    animation: focoSuave 0.5s ease-out both;
+}
+
+@keyframes focoSuave {
+
+    from {
+        opacity: 0;
+        filter: blur(5px);
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+
+@media (max-width: 1000px) {
+
+    .content {
+        padding: 35px 30px;
+    }
+
+    .overview {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .main-stat {
+        grid-column: span 2;
+    }
+
+    .quick-links {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+        height: auto;
+
+        padding: 25px 20px;
+    }
+
+    .dashboard {
+        display: block;
+    }
+
+    .content {
+        width: 100%;
+        margin-left: 0;
+
+        padding: 30px 20px;
+    }
+
+    .logo {
+        padding-bottom: 25px;
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .menu a {
+        flex: 1;
+        text-align: center;
+    }
+
+    .button-exit {
+        margin-top: 20px;
+    }
+
+    .top {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .user-info {
+        text-align: left;
+    }
+
+    .overview {
+        grid-template-columns: 1fr;
+    }
+
+    .main-stat {
+        grid-column: span 1;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .content {
+        padding: 25px 15px;
+    }
+
+    .page-title h1 {
+        font-size: 26px;
+    }
+
+    .main-stat,
+    .small-stat,
+    .attendance {
+        padding: 23px;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+}
